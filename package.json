@@ -1,0 +1,11 @@
+{
+  "name": "ydb-helpers",
+  "version": "0.0.1",
+  "description": "Yandex Database Helpers",
+  "main": "index.js",
+  "author": "jeshio",
+  "license": "MIT",
+  "dependencies": {
+    "ydb-sdk": "3.0.0"
+  }
+}
