@@ -1,10 +1,22 @@
 {
   "name": "ydb-helpers",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Yandex Database Helpers",
   "main": "index.js",
-  "author": "jeshio",
+  "keywords": [
+    "ydb",
+    "ydb-sdk",
+    "yandex cloud",
+    "utils",
+    "helpers"
+  ],
+  "author": "jeshio@yandex.ru",
   "license": "MIT",
+  "bugs": "https://github.com/jeshio/ydb-helpers/issues",
+  "repository": {
+    "url": "https://github.com/jeshio/ydb-helpers",
+    "type": "git"
+  },
   "dependencies": {
     "ydb-sdk": "3.0.0"
   }
