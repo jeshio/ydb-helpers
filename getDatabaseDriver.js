@@ -1,4 +1,4 @@
-const {getLogger, getCredentialsFromEnv, Driver} = require("ydb-sdk");
+const {getCredentialsFromEnv, Driver} = require("ydb-sdk");
 
 module.exports.default = async () => {
     const {
@@ -7,7 +7,6 @@ module.exports.default = async () => {
         TIMEOUT_MS,
     } = process.env
 
-    const logger = getLogger()
     const authService = getCredentialsFromEnv()
     const driver = new Driver({
         endpoint: ENTRY_POINT,
@@ -15,7 +14,7 @@ module.exports.default = async () => {
         authService,
     })
 
-    if (!await driver.ready(TIMEOUT_MS)) {
+    if (!await driver.ready(Number(TIMEOUT_MS))) {
         process.exit(1)
     }
     return driver;
