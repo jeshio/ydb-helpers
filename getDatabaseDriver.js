@@ -1,11 +1,16 @@
 const {getCredentialsFromEnv, Driver} = require("ydb-sdk");
+const {getConstants} = require("./index");
 
+/**
+ * Try to get connected database driver
+ * @returns {Promise<Driver>}
+ */
 module.exports.default = async () => {
     const {
         ENTRY_POINT,
         DB_NAME,
         TIMEOUT_MS,
-    } = process.env
+    } = getConstants()
 
     const authService = getCredentialsFromEnv()
     const driver = new Driver({
