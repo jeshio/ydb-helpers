@@ -1,5 +1,5 @@
-const {getCredentialsFromEnv, Driver, TypedData} = require("ydb-sdk");
-const {getConstants} = require("./index");
+const {TypedData} = require("ydb-sdk");
+const getConstants = require("./getConstants").default
 
 /**
  * Get last primary key value from table

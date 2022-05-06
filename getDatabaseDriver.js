@@ -1,5 +1,5 @@
 const {getCredentialsFromEnv, Driver} = require("ydb-sdk");
-const {getConstants} = require("./index");
+const getConstants = require("./getConstants").default
 
 /**
  * Try to get connected database driver
